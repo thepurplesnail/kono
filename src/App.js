@@ -1,20 +1,20 @@
-import './styling/App.css';
+import './styling/App.scss';
 import React from 'react';
 import NavBar from './components/navbar.jsx';
+import History from './components/history';
+import Objectives from './components/objectives';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <NavBar/>
-        <p className='title'>
+        <p className='web-title'>
           Kono Annual Presitigious Awards
         </p>
-        
       </header>
-      <div>
-        HELLO WORLD
-      </div>
+      <History/>
+      <Objectives/>
     </div>
   );
 }

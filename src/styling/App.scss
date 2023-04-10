@@ -4,8 +4,12 @@
   text-align: center;
 }
 
+.banner {
+  height: 100vh;
+}
+
 .App-header {
-  background-image: url("lecture.jpg");
+  background-image: url("./images/lecture.jpg");
   background-size: cover;
   background-position: center 15%;
   
@@ -28,11 +32,18 @@
   opacity: .6;
 }
 
-.title {
-  position: relative;
+.App-header:hover {
+  &:before{
+    opacity: .8;
+    transition: 500ms ease-in;
+  }
+}
+
+.web-title {
   font-weight: 800;
   font-size: 4em;
   color: white;
   opacity: 1;
+  z-index: 40;
 }
 

@@ -1,12 +1,18 @@
 import React from "react";
-import '../styling/navbar.css'
+import '../styling/navbar.scss'
 
 export default function NavBar(){
     return(
         <div className="nav-wrapper">
             <ul className="menu">
                 <li className="menu-item"><a href="#">Home</a></li>
-                <li className="menu-item"><a href="#">About</a></li>
+                <li className="menu-item has-submenu">
+                    <a href="#">About</a>
+                    <ul className="sub-menu">
+                        <li className="menu-item"><a href="#">History</a></li>
+                        <li className="menu-item"><a href="#">Objectives</a></li>
+                    </ul>
+                </li>
                 <li className="menu-item"><a href="#">Members</a></li>
                 <li className="menu-item"><a href="#">Awards Night</a></li>
                 <li className="menu-item has-submenu">
