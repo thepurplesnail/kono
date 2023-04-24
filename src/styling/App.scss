@@ -18,7 +18,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .App-header::before {
@@ -40,6 +39,7 @@
 }
 
 .web-title {
+  flex-grow: 3;
   font-weight: 800;
   font-size: 4em;
   color: white;

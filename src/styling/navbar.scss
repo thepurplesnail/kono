@@ -6,7 +6,8 @@
 }
 
 .nav-wrapper {
-  margin-top: 0;
+  flex-grow: 2;
+  margin-top: 5vh;
 }
 
 ul {
@@ -58,9 +59,9 @@ li a:hover {
         z-index: 999;
         
         opacity: 0;
-        transform: translateY(-200px);
+        
         pointer-events: none;
-        transition: 0.4s ease-out;
+        transition: 0.2s ease-out;
 
         min-width: 100%;
         width: max-content;
@@ -74,7 +75,6 @@ li a:hover {
       &:hover {
         > .sub-menu {
           opacity: 1;
-          transform: translateY(0);
           pointer-events: all;
 
           .sub-menu {
