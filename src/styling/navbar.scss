@@ -10,6 +10,19 @@
   margin-top: 5vh;
 }
 
+.sticky-nav {
+  flex-grow: 2;
+  position: fixed;
+  background-color: var(--black);
+  z-index: 999;
+  padding: 35px 0 5px 0;
+  margin-top: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -18,7 +31,7 @@ ul {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: var(--black);
+  background-color: black;
   transition: 500ms;
 }
 
@@ -63,9 +76,8 @@ li a:hover {
         pointer-events: none;
         transition: 0.2s ease-out;
 
-        min-width: 100%;
-        width: max-content;
-        background-color: #222;
+        
+        background-color: var(--black);
         list-style-type: none;
         .menu-item {
           width: 100%;
