@@ -1,6 +1,23 @@
 import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import '../styling/navbar.scss'
+
+export const HomeLink = props => {
+    return(
+        <li className="menu-item">
+            <HashLink to = {`/${props.id}`}>{props.name}</HashLink>
+        </li>
+    )
+}
+
+export const NonHomeLink = props => {
+    return(
+        <li className="menu-item" onClick = {props.handleChange()}>
+            <Link to = {`/${props.name}`}>{props.name}</Link>
+        </li>
+    )
+}
 
 export default function NavBar(){
     const [onHome, setOnHome] = useState(true);
@@ -14,38 +31,29 @@ export default function NavBar(){
     const stickNavbar = () => {
         if (window !== undefined) {
             let windowHeight = window.scrollY;
-            // window height changed for the demo
             windowHeight > 0 ? setStickyClass('sticky-nav') : setStickyClass('');
         }
     };
 
-    const renderHome = (onHome) => onHome ? <a href = '#home'>Home</a> : <Link to = '/'>Home</Link>
-    
-
-    const goHome = () => {
-        if (onHome){
-            window.scrollTo(0,0);
-        }
-    }
     return(
         <div className={`nav-wrapper ${stickyClass}`}>
             <ul className="menu">
-                <li className="menu-item">
-                    {renderHome(onHome)}
-                </li>
+
+                <HomeLink onHome = {onHome} id = "#home" name = "Home"/>
+
                 <li className="menu-item has-submenu">
-                    <a>About</a>
+                    <HomeLink onHome = {onHome} id = "#home" name = "About" />
                     <ul className="sub-menu">
-                        <li className="menu-item"><a href="#history">History</a></li>
-                        <li className="menu-item" ><a href="#objectives">Objectives</a></li>
+                        <HomeLink onHome = {onHome} id = "#history" name = "History" />
+                        <HomeLink onHome = {onHome} id = "#objectives" name = "Objectives"/>
                     </ul>
                 </li>
-                <li className="menu-item">
-                    <Link to = '/members'>Members</Link>
-                </li>
-                <li className="menu-item"><a href="#">Awards Night</a></li>
+
+                <NonHomeLink name = 'Members' handleChange = {() => setOnHome(false)}/>
+                <NonHomeLink name = 'Awards Night' handleChange = {() => setOnHome(false)}/>
+
                 <li className="menu-item has-submenu">
-                    <a href="#">Donations</a>
+                    <NonHomeLink name = 'Donations' handleChange = {() => setOnHome(false)}/>
                     <ul className = 'sub-menu'>
                         <li className= 'menu-item has-submenu'>
                             <a href="#">Education</a>

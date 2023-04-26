@@ -1,5 +1,10 @@
 @import './constants.css';
 
+.page {
+  display: flex;
+  justify-content: center;
+}
+
 .scrollable {
   scroll-margin-top: 10vh;
 }
