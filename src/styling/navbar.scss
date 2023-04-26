@@ -6,8 +6,9 @@
 }
 
 .nav-wrapper {
-  flex-grow: 2;
-  margin-top: 5vh;
+  position: absolute;
+  z-index: 999;
+  padding-top: 5vh;
 }
 
 .sticky-nav {
@@ -15,8 +16,6 @@
   position: fixed;
   background-color: var(--black);
   z-index: 999;
-  padding: 35px 0 5px 0;
-  margin-top: 0;
   width: 100vw;
   display: flex;
   flex-direction: row;

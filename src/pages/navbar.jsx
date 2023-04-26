@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 import '../styling/navbar.scss'
 
 export default function NavBar(){
+    const [onHome, setOnHome] = useState(true);
     const [stickyClass, setStickyClass] = useState('');
 
     useEffect(() => {
@@ -17,18 +19,30 @@ export default function NavBar(){
         }
     };
 
+    const renderHome = (onHome) => onHome ? <a href = '#home'>Home</a> : <Link to = '/'>Home</Link>
+    
+
+    const goHome = () => {
+        if (onHome){
+            window.scrollTo(0,0);
+        }
+    }
     return(
         <div className={`nav-wrapper ${stickyClass}`}>
             <ul className="menu">
-                <li className="menu-item"><a href="#">Home</a></li>
+                <li className="menu-item">
+                    {renderHome(onHome)}
+                </li>
                 <li className="menu-item has-submenu">
-                    <a href="#">About</a>
+                    <a>About</a>
                     <ul className="sub-menu">
-                        <li className="menu-item"><a href="#">History</a></li>
-                        <li className="menu-item"><a href="#">Objectives</a></li>
+                        <li className="menu-item"><a href="#history">History</a></li>
+                        <li className="menu-item" ><a href="#objectives">Objectives</a></li>
                     </ul>
                 </li>
-                <li className="menu-item"><a href="#">Members</a></li>
+                <li className="menu-item">
+                    <Link to = '/members'>Members</Link>
+                </li>
                 <li className="menu-item"><a href="#">Awards Night</a></li>
                 <li className="menu-item has-submenu">
                     <a href="#">Donations</a>

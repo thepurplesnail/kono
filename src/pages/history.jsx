@@ -1,15 +1,15 @@
 import React from "react";
-import '../styling/objectives.scss'
-import dart from '../styling/images/dart.jpg';
+import '../styling/history.scss'
+import clock from '../styling/images/clock.jpg';
 
-export default function Objectives(){
+export default function History(){
     return(
-    <div className="objectives-wrapper">
+    <div className="history-wrapper scrollable" id = "history">
         <h1 className='title'>
-          Objectives
+          History
         </h1>
         <div className="content">
-            <img src = {dart} className="dart"/>
+            <img src = {clock} className="clock"/>
             <div className="text">
                 <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

@@ -1,12 +1,12 @@
 import './styling/App.scss';
 import React from 'react';
-import NavBar from './components/navbar.jsx';
-import History from './components/history';
-import Objectives from './components/objectives';
+import NavBar from './pages/navbar.jsx';
+import History from './pages/history';
+import Objectives from './pages/objectives';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" id = 'home'>
       <header className="App-header">
         <NavBar/>
         <p className='web-title'>

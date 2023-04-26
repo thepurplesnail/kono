@@ -1,11 +1,11 @@
 @import './constants.css';
 
-.App {
-  text-align: center;
+.scrollable {
+  scroll-margin-top: 10vh;
 }
 
-.banner {
-  height: 100vh;
+.App {
+  text-align: center;
 }
 
 .App-header {
@@ -39,7 +39,7 @@
 }
 
 .web-title {
-  flex-grow: 3;
+  margin-top: 40vh;
   font-weight: 800;
   font-size: 4em;
   color: white;
@@ -47,3 +47,6 @@
   z-index: 40;
 }
 
+html {
+  scroll-behavior: smooth;
+}
