@@ -20,8 +20,8 @@ export const NonHomeLink = ({handleChange, id, name, ...props}) => {
 }
 
 export default function NavBar(){
-    const [stickyClass, setStickyClass] = useState('');
-    const [onHome, setOnHome] = useState(true);
+    const [stickyClass, setStickyClass] = useState('sticky-nav');
+    const [onHome, setOnHome] = useState(false);
 
     useEffect(() => {
         if (onHome){
