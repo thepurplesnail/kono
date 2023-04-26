@@ -1,32 +1,34 @@
 import React, {useState, useEffect} from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import '../styling/navbar.scss'
 
-export const HomeLink = props => {
+export const HomeLink = ({handleChange, id, name, ...props}) => {
     return(
-        <li className="menu-item">
-            <HashLink to = {`/${props.id}`}>{props.name}</HashLink>
+        <li className="menu-item" onClick = {handleChange}>
+            <HashLink to = {`/${id}`}>{name}</HashLink>
         </li>
     )
 }
 
-export const NonHomeLink = props => {
+export const NonHomeLink = ({handleChange, id, name, ...props}) => {
     return(
-        <li className="menu-item" onClick = {props.handleChange()}>
-            <Link to = {`/${props.name}`}>{props.name}</Link>
+        <li className="menu-item" onClick = {handleChange}>
+            <Link to = {`/${name}`}>{name}</Link>
         </li>
     )
 }
 
 export default function NavBar(){
-    const [onHome, setOnHome] = useState(true);
     const [stickyClass, setStickyClass] = useState('');
+    const [onHome, setOnHome] = useState(true);
 
     useEffect(() => {
-        window.addEventListener('scroll', stickNavbar);
-        return () => window.removeEventListener('scroll', stickNavbar);
-      }, []);
+        if (onHome){
+            window.addEventListener('scroll', stickNavbar);
+            return () => window.removeEventListener('scroll', stickNavbar);
+        }
+      }, [onHome]);
     
     const stickNavbar = () => {
         if (window !== undefined) {
@@ -35,25 +37,35 @@ export default function NavBar(){
         }
     };
 
+    const handleHomeClick = () => {
+        setStickyClass(''); 
+        setOnHome(true);
+    }
+
+    const handleNonHomeClick = () => {
+        setStickyClass('sticky-nav'); 
+        setOnHome(false);
+    }
+
     return(
         <div className={`nav-wrapper ${stickyClass}`}>
             <ul className="menu">
 
-                <HomeLink onHome = {onHome} id = "#home" name = "Home"/>
+                <HomeLink id = "#home" name = "Home" handleChange = {() => handleHomeClick()}/>
 
                 <li className="menu-item has-submenu">
-                    <HomeLink onHome = {onHome} id = "#home" name = "About" />
+                    <HomeLink id = "#home" name = "About" handleChange = {() => handleHomeClick()}/>
                     <ul className="sub-menu">
-                        <HomeLink onHome = {onHome} id = "#history" name = "History" />
-                        <HomeLink onHome = {onHome} id = "#objectives" name = "Objectives"/>
+                        <HomeLink id = "#history" name = "History" handleChange = {() => {setStickyClass('sticky-nav');}}/>
+                        <HomeLink id = "#objectives" name = "Objectives" handleChange = {() => setStickyClass('sticky-nav')}/>
                     </ul>
                 </li>
 
-                <NonHomeLink name = 'Members' handleChange = {() => setOnHome(false)}/>
-                <NonHomeLink name = 'Awards Night' handleChange = {() => setOnHome(false)}/>
+                <NonHomeLink name = 'Members' handleChange = {() => handleNonHomeClick()}/>
+                <NonHomeLink name = 'Awards Night' handleChange = {() => handleNonHomeClick()}/>
 
                 <li className="menu-item has-submenu">
-                    <NonHomeLink name = 'Donations' handleChange = {() => setOnHome(false)}/>
+                    <NonHomeLink name = 'Donations' handleChange = {() => setStickyClass('sticky-nav')}/>
                     <ul className = 'sub-menu'>
                         <li className= 'menu-item has-submenu'>
                             <a href="#">Education</a>
