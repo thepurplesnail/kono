@@ -1,4 +1,4 @@
-@import './constants.css';
+@import '../constants.css';
 
 * {
     margin: 0;
@@ -8,6 +8,13 @@
 div .history-wrapper {
     padding: 10vh 10vw;
     color: var(--blue-3);
+
+    .content{
+        height: fit-content;
+        .text {
+            height: fit-content;
+        }
+    }
 }
 
 .title {

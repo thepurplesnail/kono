@@ -1,5 +1,5 @@
 import React from "react";
-import '../styling/history.scss'
+import '../styling/submenu_1/history.scss'
 import clock from '../styling/images/clock.jpg';
 
 export default function History(){

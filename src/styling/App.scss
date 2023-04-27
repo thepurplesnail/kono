@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-image: url("./images/lecture.jpg");
+  background-image: url("./images/headers/lecture.jpg");
   background-size: cover;
   background-position: center 15%;
   
@@ -23,23 +23,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.App-header::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: var(--black);
-  opacity: .6;
-}
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--black);
+    opacity: .6;
+  }
 
-.App-header:hover {
-  &:before{
-    opacity: .8;
-    transition: 500ms ease-in;
+  &:hover {
+    &:before{
+      opacity: .8;
+      transition: 500ms ease-in;
+    }
   }
 }
 

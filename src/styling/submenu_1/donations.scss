@@ -1,0 +1,50 @@
+@import '../constants.css';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.donations-wrapper {
+    margin-top: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.donations-wrapper {
+
+    .header {
+        background-image: url("../images/headers/donations.jpg");
+        background-size: 100%;
+        background-position: center 70%;
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 30vh;
+        padding: 20vh 0 2rem 0;
+
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        .title {
+            color: white;
+            z-index: 40;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-color: var(--blue-3);
+            opacity: .6;
+        }
+    }
+}
+
+.content {
+    height: 100vh;
+    width: 80vw;
+}

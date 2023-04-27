@@ -1,4 +1,4 @@
-@import './constants.css';
+@import '../constants.css';
 
 * {
     margin: 0;
@@ -12,9 +12,15 @@
 }
 
 .objectives-wrapper {
-    padding: 10vh 10vw 20vh 10vw;
+    padding: 10vh 10vw;
     background-color: var(--blue-1);
-    height: 70vh;
+
+    .content{
+        height: fit-content;
+        .text {
+            height: fit-content;
+        }
+    }
 }
 
 .title {

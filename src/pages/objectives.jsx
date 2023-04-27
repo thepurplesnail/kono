@@ -1,5 +1,5 @@
 import React from "react";
-import '../styling/objectives.scss'
+import '../styling/submenu_1/objectives.scss'
 import dart from '../styling/images/dart.jpg';
 
 export default function Objectives(){
