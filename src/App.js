@@ -1,6 +1,6 @@
 import './styling/App.scss';
 import React from 'react';
-import NavBar from './pages/navbar.jsx';
+import NavBar from './components/navbar.jsx';
 import History from './pages/history';
 import Objectives from './pages/objectives';
 
@@ -14,9 +14,9 @@ export const Home = () => {
   return(
     <div className="App" id = 'home'>
       <header className="App-header">
-        <p className='web-title'>
+        <h1 className='web-title'>
           Kono Annual Presitigious Awards
-        </p>
+        </h1>
       </header>
       <History/>
       <Objectives/>

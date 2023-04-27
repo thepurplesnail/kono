@@ -9,11 +9,13 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .members-wrapper {
 
     .header {
+        width: 100%;
         background-image: url("../images/headers/members.jpg");
         background-size: 100%;
         background-position: center 70%;
@@ -44,10 +46,21 @@
     }
 
     .content {
-        height: 100vh;
-        width: 100%;
+        padding: 3rem;
+    
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+    
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 3rem;
+        }
     }
+    
 }
-
-
 

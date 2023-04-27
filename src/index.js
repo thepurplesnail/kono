@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './styling/index.css';
 import App from './App';
-import { Members } from './pages/members';
 import reportWebVitals from './reportWebVitals';
-import NavBar from './pages/navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
