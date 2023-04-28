@@ -1,14 +1,9 @@
 @import '../constants.css';
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Merriweather:wght@300&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-}
-
 .image {
-    width: 250px;
-    height: 250px;
+    width: 15rem;
+    height: 15rem;
     object-fit: cover;
     border-radius: 50%;
     

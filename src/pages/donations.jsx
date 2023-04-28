@@ -12,8 +12,25 @@ export const Donations = () => {
             <div className = 'header'>
                 <h1 className="title">Donations</h1>
             </div>
-            <div className="content">
-                <h1>Content</h1>
+            <div className="row-1">
+                <div className="card-wrapper">
+                    <h2>Education</h2>
+                    <div className="sub-categories" >
+                            <h3>Universities</h3>
+                        
+                            <h3>Secondary Schools</h3>
+                        
+                            <h3>Primary Schools</h3>
+                    </div>
+                </div>
+
+                <div className="card-wrapper">
+                    <h2>Medical</h2>
+                    <div className="sub-categories">
+                        <h3>Patients</h3>
+                        <h3>Hospitals</h3>
+                    </div>
+                </div>
             </div>
         </div>
     )
