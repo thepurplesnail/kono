@@ -5,9 +5,9 @@ export const Member = (props) => {
     return(
         <div className="member-wrapper">
             <img src = {props.url} className="image"/>
-            <h2 className="name">{props.name}</h2>
+            <h3 className="name">{props.name}</h3>
             <p className = 'bio'>
-                {props.bio}
+                <span className="tab"/>{props.bio}
             </p>
         </div>
     )

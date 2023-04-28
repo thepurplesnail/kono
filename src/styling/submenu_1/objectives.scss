@@ -14,37 +14,32 @@
 .objectives-wrapper {
     padding: 10vh 10vw;
     background-color: var(--blue-1);
-    min-height: fit-content;
-    height: 80vh;
+    max-height: fit-content;
+    min-height: 100vh;
+
+    .title {
+        margin-bottom: 2rem; 
+        color: var(--blue-3);
+    }
 
     .content{
+        display: flex;
+        flex-direction: row;
         height: fit-content;
+
         .text {
             height: fit-content;
+            padding-left: 3rem;
+
+            p {
+                margin-bottom: 2rem;
+                font-weight: 590;
+                font-size: 1.3rem;
+                color: var(--black);
+                text-align: left;
+
+                opacity: .8;
+            }
         }
     }
-}
-
-.title {
-    font-size: 3rem;
-    margin-bottom: 2rem; 
-    color: var(--blue-3);
-}
-
-p {
-    margin-bottom: 2rem;
-    font-weight: 590;
-    font-size: 1.3rem;
-    color: var(--black);
-    opacity: .8;
-}
-
-.content {
-    display: flex;
-    flex-direction: row;
-}
-
-.text {
-    padding-left: 3rem;
-    padding-right: 6rem;
 }

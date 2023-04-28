@@ -11,6 +11,7 @@
     height: 250px;
     object-fit: cover;
     border-radius: 50%;
+    
 }
 
 .member-wrapper {
@@ -19,14 +20,16 @@
     align-items: center;
     height:fit-content;
 
-    width: 300px;
 
-    p {
-        text-align: center;
+    width: 300px;
+    .tab {
+        display: inline-block;
+        margin-left: 2rem;
     }
 }
 
 .name {
+    text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-weight:800;
@@ -34,4 +37,5 @@
 
 .bio {
     font-size: 1rem;
+    text-align: left;
 }

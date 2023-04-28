@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import '../styling/navbar.scss'
 
-export const HomeLink = ({handleChange, id, name, ...props}) => {
+export const HomeLink = ({id, name, ...props}) => {
     return(
         <li className="menu-item">
             <HashLink to = {`/${id}`}>{name}</HashLink>
@@ -11,9 +11,9 @@ export const HomeLink = ({handleChange, id, name, ...props}) => {
     )
 }
 
-export const NonHomeLink = ({handleChange, id, name, ...props}) => {
+export const NonHomeLink = ({id, name, ...props}) => {
     return(
-        <li className="menu-item">
+        <li className="menu-item" onClick = {()=> {window.scrollTo(0,0)}}>
             <Link to = {`/${name}`}>{name}</Link>
         </li>
     )
@@ -51,35 +51,25 @@ export default function NavBar(){
         }
     };
 
-    const handleHomeClick = () => {
-        setStickyClass(''); 
-        setOnHome(true);
-    }
-
-    const handleNonHomeClick = () => {
-        setStickyClass('sticky-nav'); 
-        setOnHome(false);
-    }
-
     return(
         <div className={`nav-wrapper ${stickyClass}`}>
             <ul className="menu">
 
-                <HomeLink id = "#home" name = "Home" handleChange = {() => handleHomeClick()}/>
+                <HomeLink id = "#home" name = "Home"/>
 
                 <li className="menu-item has-submenu">
-                    <HomeLink id = "#home" name = "About" handleChange = {() => handleHomeClick()}/>
+                    <HomeLink id = "#home" name = "About"/>
                     <ul className="sub-menu">
-                        <HomeLink id = "#history" name = "History" handleChange = {() => {setStickyClass('sticky-nav');}}/>
-                        <HomeLink id = "#objectives" name = "Objectives" handleChange = {() => setStickyClass('sticky-nav')}/>
+                        <HomeLink id = "#history" name = "History"/>
+                        <HomeLink id = "#objectives" name = "Objectives"/>
                     </ul>
                 </li>
 
-                <NonHomeLink name = 'Members' handleChange = {() => handleNonHomeClick()}/>
-                <NonHomeLink name = 'Awards Night' handleChange = {() => handleNonHomeClick()}/>
+                <NonHomeLink name = 'Members'/>
+                <NonHomeLink name = 'Awards Night'/>
 
                 <li className="menu-item has-submenu">
-                    <NonHomeLink name = 'Donations' handleChange = {() => setStickyClass('sticky-nav')}/>
+                    <NonHomeLink name = 'Donations'/>
                     <ul className = 'sub-menu'>
                         <li className= 'menu-item has-submenu'>
                             <a href="#">Education</a>

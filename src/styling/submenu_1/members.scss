@@ -6,7 +6,7 @@
 }
 .members-wrapper {
     margin-top: 10vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +23,7 @@
         position: relative;
         display: flex;
         justify-content: center;
-        height: 30vh;
+        height: 50vh;
         padding: 20vh 0 2rem 0;
 
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -46,7 +46,8 @@
     }
 
     .content {
-        padding: 3rem;
+        padding: 3rem 8rem;
+        width: 100%;
     
         display: flex;
         flex-direction: column;
@@ -59,6 +60,7 @@
             justify-content: space-between;
             width: 100%;
             margin-bottom: 3rem;
+            flex-wrap:nowrap;
         }
     }
     
