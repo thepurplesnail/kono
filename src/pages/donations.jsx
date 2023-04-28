@@ -12,7 +12,7 @@ export const Donations = () => {
             <div className = 'header'>
                 <h1 className="title">Donations</h1>
             </div>
-            <div className="row">
+            <div className="card-row">
                 <div className="card-wrapper education">
                     <h2>Education</h2>
                     <div className="sub-categories" >
@@ -35,7 +35,7 @@ export const Donations = () => {
                     <h3>Orphanages</h3>
                 </div>
             </div>
-            <div className="row">
+            <div className="card-row">
                 <div className="card-wrapper the-blinds single">
                     <h3>The Blinds</h3>
                 </div>
@@ -46,9 +46,20 @@ export const Donations = () => {
                     <h3>Soccer: Ibrahim Dainkeh Memorial Gala</h3>
                 </div>
             </div>
-            <div className="row">
+            <div className="card-row">
                 <div className="card-wrapper villages single">
                     <h3>Chiefdoms/Villages</h3>
+                </div>
+            </div>
+            <div className="row-3">
+                <div className="card-wrapper the-blinds single">
+                    <h3>The Blinds</h3>
+                </div>
+                <div className="card-wrapper entertainment single">
+                    <h3>Entertainments</h3>
+                </div>
+                <div className="card-wrapper soccer single">
+                    <h3>Soccer: Ibrahim Dainkeh Memorial Gala</h3>
                 </div>
             </div>
         </div>
