@@ -46,6 +46,11 @@ export const Donations = () => {
                     <h3>Soccer: Ibrahim Dainkeh Memorial Gala</h3>
                 </div>
             </div>
+            <div className="row">
+                <div className="card-wrapper villages single">
+                    <h3>Chiefdoms/Villages</h3>
+                </div>
+            </div>
         </div>
     )
 }

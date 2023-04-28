@@ -94,6 +94,10 @@
                 background-image: url("../images/donations/soccer_bkgd.jpg");
             }
 
+            &.villages{
+                background-image: url("../images/donations/villages_bkgd.jpg");
+            }
+
             background-size: cover;
 
             &::before {
