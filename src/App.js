@@ -7,7 +7,8 @@ import Objectives from './pages/objectives';
 import { Members } from './pages/members';
 import { Awards } from './pages/awards';
 import { Donations } from './pages/donations';
-
+import { Education } from './pages/education/education';
+import { Universities } from './pages/education/universities';
 import { Routes, Route } from 'react-router-dom';
 
 export const Home = () => {
@@ -32,9 +33,11 @@ function App() {
       <>
         <Routes>
           <Route path = '/' element = {<Home/>}/>
-          <Route path = '/Members' element = {<Members/>}/>
-          <Route path = '/Awards Night' element = {<Awards/>}/>
-          <Route path = '/Donations' element = {<Donations/>}/>
+          <Route path = '/members' element = {<Members/>}/>
+          <Route path = '/awards night' element = {<Awards/>}/>
+          <Route path = '/donations' element = {<Donations/>}/>
+          <Route path = '/donations/education' element = {<Education/>}/>
+          <Route path = '/donations/education/universities' element = {<Universities/>}/>
         </Routes>
       </>
     </div>

@@ -1,0 +1,101 @@
+@import '../../constants.css';
+
+.education-wrapper{
+    margin-top: 10vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        background-image: url("../../images/headers/education.jpg");
+        background-size: 100%;
+        background-position: center 70%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 50vh;
+        padding: 20vh 0 2rem 0;
+
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        .title {
+            color: white;
+            z-index: 40;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-color: var(--black);
+            opacity: .6;
+        }
+    }
+    .content {
+        min-height: 100vh;
+        max-height: fit-content;
+        width: 100%;
+
+        display:flex;
+        flex-direction: column;
+
+        #uni {
+            background-color: var(--blue-3);
+            color: white;
+        }
+
+        #secondary {
+            background-color: var(--blue-2);
+        }
+
+        .section-wrapper {
+            padding: 2rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .section-header {
+                padding: 0 1rem;
+                margin: 3rem 0;
+
+                h1 {
+                    font-weight: 500;
+                }
+            }
+
+            .subsection-wrapper {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 4rem;
+
+                .desc {
+                    width: 30vw;
+                    p {
+                        font-size:1.5rem;
+                    }
+                }
+
+                .pic {
+                    width: 60vw;
+                    max-height: 70vh;
+                    object-fit: contain;
+                }
+
+                #uni1 {
+                    margin-right: 2rem;
+                }
+
+                #uni2 {
+                    margin:0 0 0 1rem;
+                }
+            }
+        }
+    }
+}

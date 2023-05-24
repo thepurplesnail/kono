@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import '../styling/navbar.scss'
 
-export const HomeLink = ({id, name, ...props}) => {
+export const SharedPgLink = ({id, name, ...props}) => {
     return(
         <li className="menu-item">
             <HashLink to = {`/${id}`}>{name}</HashLink>
@@ -11,10 +11,10 @@ export const HomeLink = ({id, name, ...props}) => {
     )
 }
 
-export const NonHomeLink = ({id, name, ...props}) => {
+export const PgLink = ({id, name, linkName, ...props}) => {
     return(
         <li className="menu-item" onClick = {()=> {window.scrollTo(0,0)}}>
-            <Link to = {`/${name}`}>{name}</Link>
+            <Link to = {`/${linkName}`}>{name}</Link>
         </li>
     )
 }
@@ -55,26 +55,26 @@ export default function NavBar(){
         <div className={`nav-wrapper ${stickyClass}`}>
             <ul className="menu">
 
-                <HomeLink id = "#home" name = "Home"/>
+                <SharedPgLink id = "#home" name = "Home"/>
 
                 <li className="menu-item has-submenu">
-                    <HomeLink id = "#home" name = "About"/>
+                    <SharedPgLink id = "#home" name = "About"/>
                     <ul className="sub-menu">
-                        <HomeLink id = "#history" name = "History"/>
-                        <HomeLink id = "#objectives" name = "Objectives"/>
+                        <SharedPgLink id = "#history" name = "History"/>
+                        <SharedPgLink id = "#objectives" name = "Objectives"/>
                     </ul>
                 </li>
 
-                <NonHomeLink name = 'Members'/>
-                <NonHomeLink name = 'Awards Night'/>
+                <PgLink name = 'Members' linkName='members'/>
+                <PgLink name = 'Awards Night' linkName = 'awards night'/>
 
                 <li className="menu-item has-submenu">
-                    <NonHomeLink name = 'Donations'/>
+                    <PgLink name = 'Donations' linkName = "donations"/>
                     <ul className = 'sub-menu'>
                         <li className= 'menu-item has-submenu'>
-                            <a href="#">Education</a>
+                            <PgLink name = 'Education' linkName = 'donations/education'/>
                             <ul className= 'sub-menu'>
-                                <li className= 'menu-item'><a href="#">Universities</a></li>
+                                <PgLink name = 'Universities' linkName = 'education/universities'/>
                                 <li className= 'menu-item'><a href="#">Secondary Schools</a></li>
                                 <li className= 'menu-item'><a href="#">Primary Schools</a></li>
                             </ul>
