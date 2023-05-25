@@ -1,16 +1,16 @@
 import React from "react";
-import university_1 from '../../styling/images/education/universities/universities_1.jpg';
-import university_2 from '../../styling/images/education/universities/universities_2.jpg';
+import elementary_1 from '../../styling/images/education/elementary/elementary-1.jpg';
+import elementary_2 from '../../styling/images/education/elementary/elementary-2.jpg';
 
-export const Universities = () => {
+export const Primary = () => {
     return(
-        <div className="section-wrapper scrollable" id = 'uni'>
+        <div className="section-wrapper scrollable" id = 'primary'>
             <div className="section-header">
-                <h1>Universities</h1>
+                <h1>Primary Schools</h1>
             </div>
 
             <div className="subsection-wrapper">
-                <img src={university_1} className="pic" id = 'uni1'/>
+                <img src={elementary_1} className="pic" id = 'uni1'/>
                 <div className="desc">
                     <h2>Lorem ipsum dolor sit amet.</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolorum nobis ducimus aliquam saepe amet!</p>
@@ -22,8 +22,8 @@ export const Universities = () => {
                     <h2>Lorem ipsum dolor sit amet.</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolorum nobis ducimus aliquam saepe amet!</p>
                 </div>
-                <img src={university_2} className="pic" id = 'uni2'/>
+                <img src={elementary_2} className="pic" id = 'uni2'/>
             </div>
-        </div> 
+        </div>
     )
 }

@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react";
-import { Link, useLocation, NavLink } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import '../styling/navbar.scss'
 
-export const SharedPgLink = ({id, name, ...props}) => {
+export const SharedPgLink = ({id, name}) => {
     return(
         <li className="menu-item">
             <HashLink to = {`/${id}`}>{name}</HashLink>
@@ -11,7 +11,7 @@ export const SharedPgLink = ({id, name, ...props}) => {
     )
 }
 
-export const PgLink = ({id, name, linkName, ...props}) => {
+export const PgLink = ({name, linkName}) => {
     return(
         <li className="menu-item" onClick = {()=> {window.scrollTo(0,0)}}>
             <Link to = {`/${linkName}`}>{name}</Link>
@@ -74,9 +74,9 @@ export default function NavBar(){
                         <li className= 'menu-item has-submenu'>
                             <PgLink name = 'Education' linkName = 'donations/education'/>
                             <ul className= 'sub-menu'>
-                                <PgLink name = 'Universities' linkName = 'education/universities'/>
-                                <li className= 'menu-item'><a href="#">Secondary Schools</a></li>
-                                <li className= 'menu-item'><a href="#">Primary Schools</a></li>
+                                <SharedPgLink name = 'Universities' id = 'donations/education/#uni'/>
+                                <SharedPgLink name = 'Secondary Schools' id = 'donations/education/#secondary'/>
+                                <SharedPgLink name = 'Primary Schools' id = 'donations/education/#primary'/>
                             </ul>
                         </li>
                         <li className= 'menu-item has-submenu'>

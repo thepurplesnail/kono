@@ -1,6 +1,15 @@
 import {React, useEffect} from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import '../styling/submenu_1/donations.scss'
+
+const SharedPgLink = ({id, name, ...props}) => {
+    return(
+        <h3>
+            <HashLink to = {`/${id}`}>{name}</HashLink>
+        </h3>
+    )
+}
 
 export const Donations = () => {
     useEffect(()=>{
@@ -15,16 +24,16 @@ export const Donations = () => {
             </div>
             <div className="card-row">
                 <div className="card-wrapper education">
-                    <h2><Link to = '/donations/education' style={{ textDecoration: 'none', color: 'white'}}>Education</Link></h2>
+                    <h2><Link to = '/donations/education'>Education</Link></h2>
                     <div className="sub-categories" >
-                        <h3>Universities</h3>
-                        <h3>Secondary Schools</h3>
-                        <h3>Primary Schools</h3>
+                        <SharedPgLink id = 'donations/education/#uni' name = 'Universities'/>
+                        <SharedPgLink id = 'donations/education/#secondary' name = 'Secondary Schools'/>
+                        <SharedPgLink id = 'donations/education/#primary' name = 'Primary Schools'/>
                     </div>
                 </div>
 
                 <div className="card-wrapper medical">
-                    <h2>Medical</h2>
+                    <h2><Link to = '/donations/medical'>Medical</Link></h2>
                     <div className="sub-categories">
                         <h3>Patients</h3>
                         <h3>Hospitals</h3>
