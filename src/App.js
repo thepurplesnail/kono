@@ -6,9 +6,15 @@ import Objectives from './pages/objectives';
 
 import { Members } from './pages/members';
 import { Awards } from './pages/awards';
-import { Donations } from './pages/donations';
-import { Education } from './pages/education/education';
-import { Universities } from './pages/education/universities';
+import { Donations } from './pages/donations/donations';
+import { Education } from './pages/donations/education/education';
+import { Medical } from './pages/donations/medical/medical';
+import { Orphanages } from './pages/donations/orphanages';
+import { Blinds } from './pages/donations/blinds';
+import { Entertainments } from './pages/entertainments';
+import { Soccer } from './pages/donations/soccer';
+import { Chiefdoms } from './pages/donations/chiefdoms';
+
 import { Routes, Route } from 'react-router-dom';
 
 export const Home = () => {
@@ -37,7 +43,12 @@ function App() {
           <Route path = '/awards night' element = {<Awards/>}/>
           <Route path = '/donations' element = {<Donations/>}/>
           <Route path = '/donations/education' element = {<Education/>}/>
-          <Route path = '/donations/education/universities' element = {<Universities/>}/>
+          <Route path = '/donations/medical' element = {<Medical/>}/>
+          <Route path = '/donations/orphanages' element = {<Orphanages/>}/>
+          <Route path = '/donations/the-blinds' element = {<Blinds/>}/>
+          <Route path = '/donations/entertainments' element = {<Entertainments/>}/>
+          <Route path = '/donations/soccer' element = {<Soccer/>}/>
+          <Route path = '/donations/chiefdoms-villages' element = {<Chiefdoms/>}/>
         </Routes>
       </>
     </div>

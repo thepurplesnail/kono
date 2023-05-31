@@ -80,17 +80,17 @@ export default function NavBar(){
                             </ul>
                         </li>
                         <li className= 'menu-item has-submenu'>
-                            <a href="#">Medical</a>
+                            <PgLink name = 'Medical' linkName = 'donations/medical'/>
                             <ul className= 'sub-menu'>
-                                <li className= 'menu-item'><a href="#">Patients</a></li>
-                                <li className= 'menu-item'><a href="#">Hospitals</a></li>
+                                <SharedPgLink name = 'Patients' id = 'donations/medical/#patients'/>
+                                <SharedPgLink name = 'Hospitals' id = 'donations/medical/#hospitals'/>
                             </ul>
                         </li>
-                        <li className= 'menu-item'><a href="#">Orphanages</a></li>
-                        <li className= 'menu-item'><a href="#">The Blinds</a></li>
-                        <li className= 'menu-item'><a href="#">Entertainments</a></li>
-                        <li className= 'menu-item'><a href="#">Soccer: Ibrahim Dainkeh Memorial Gala</a></li>
-                        <li className= 'menu-item'><a href="#">Chiefdoms/Villages</a></li>
+                        <li className= 'menu-item'><PgLink name = 'Orphanages' linkName = 'donations/orphanages'/></li>
+                        <li className= 'menu-item'><PgLink name = 'The Blinds' linkName = 'donations/the-blinds'/></li>
+                        <li className= 'menu-item'><PgLink name = 'Entertainments' linkName = 'donations/entertainments'/></li>
+                        <li className= 'menu-item'><PgLink name = 'Soccer: Ibrahim Dainkeh Memorial Gala' linkName = 'donations/soccer'/></li>
+                        <li className= 'menu-item'><PgLink name = 'Chiefdoms/Villages' linkName = 'donations/chiefdoms-villages'/></li>
                     </ul>
                 </li>
             </ul>

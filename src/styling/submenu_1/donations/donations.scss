@@ -1,7 +1,6 @@
-@import '../constants.css';
+@import '../../constants.css';
 
 .donations-wrapper {
-    background-color: var(--blue-1);
     margin-top: 10vh;
     width: 100vw;
     display: flex;
@@ -9,9 +8,11 @@
     color: white;
     
     .header {
-        background-image: url("../images/headers/donations.jpg");
+        background-image: url("../../images/headers/donations.jpg");
         background-size: 100%;
         background-position: center 70%;
+        background-repeat: no-repeat;
+        background-size: cover;
         
         position: relative;
         display: flex;
@@ -67,19 +68,19 @@
             }
 
             &.education {
-                background-image: url("../images/donations/education_bkgd.jpg");
+                background-image: url("../../images/donations/education_bkgd.jpg");
             }
 
             &.medical{
-                background-image: url("../images/donations/medical_bkgd.jpg");
+                background-image: url("../../images/donations/medical_bkgd.jpg");
             }
 
             &.orphanages{
-                background-image: url("../images/donations/orphanages_bkgd.jpg");
+                background-image: url("../../images/donations/orphanages_bkgd.jpg");
             }
 
             &.the-blinds{
-                background-image: url("../images/donations/blinds_bkgd.jpg");
+                background-image: url("../../images/donations/blinds_bkgd.jpg");
             }
 
             &.single{
@@ -94,15 +95,15 @@
             }
 
             &.entertainment{
-                background-image: url("../images/donations/entertainment_bkgd.jpg");
+                background-image: url("../../images/donations/entertainment_bkgd.jpg");
             }
 
             &.soccer{
-                background-image: url("../images/donations/soccer_bkgd.jpg");
+                background-image: url("../../images/donations/soccer_bkgd.jpg");
             }
 
             &.villages{
-                background-image: url("../images/donations/villages_bkgd.jpg");
+                background-image: url("../../images/donations/villages_bkgd.jpg");
             }
 
             background-size: cover;

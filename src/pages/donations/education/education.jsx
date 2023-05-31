@@ -1,11 +1,16 @@
-import React from "react";
-import '../../styling/submenu_1/education/education.scss'
+import {React, useEffect} from "react";
+import '../../../styling/submenu_1/donations/education.scss'
 
 import { Universities } from "./universities";
 import { Secondary } from "./secondary";
 import { Primary } from "./primary";
 
 export const Education = () => {
+    useEffect(()=>{
+        window.scrollTo(0,0);
+        window.history.scrollRestoration = 'manual'
+    }, [])
+
     return(
         <div className="education-wrapper">
             <div className = 'header'>

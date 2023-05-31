@@ -1,9 +1,9 @@
 import {React, useEffect} from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import '../styling/submenu_1/donations.scss'
+import '../../styling/submenu_1/donations/donations.scss'
 
-const SharedPgLink = ({id, name, ...props}) => {
+const SharedPgLink = ({id, name}) => {
     return(
         <h3>
             <HashLink to = {`/${id}`}>{name}</HashLink>
@@ -35,28 +35,28 @@ export const Donations = () => {
                 <div className="card-wrapper medical">
                     <h2><Link to = '/donations/medical'>Medical</Link></h2>
                     <div className="sub-categories">
-                        <h3>Patients</h3>
-                        <h3>Hospitals</h3>
+                        <SharedPgLink id = 'donations/medical/#patients' name = 'Patients'/>
+                        <SharedPgLink id = 'donations/medical/#hospitals' name = 'Hospitals'/>
                     </div>
                 </div>
                 <div className="card-wrapper orphanages single">
-                    <h3>Orphanages</h3>
+                    <h3><Link to = '/donations/orphanages'>Orphanages</Link></h3>
                 </div>
             </div>
             <div className="card-row">
                 <div className="card-wrapper the-blinds single">
-                    <h3>The Blinds</h3>
+                    <h3><Link to = '/donations/the-blinds'>The Blinds</Link></h3>
                 </div>
                 <div className="card-wrapper entertainment single">
-                    <h3>Entertainments</h3>
+                    <h3><Link to = '/donations/entertainments'>Entertainments</Link></h3>
                 </div>
                 <div className="card-wrapper soccer single">
-                    <h3>Soccer: Ibrahim Dainkeh Memorial Gala</h3>
+                    <h3><Link to = '/donations/soccer'>Soccer: Ibrahim Dainkeh Memorial Gala</Link></h3>
                 </div>
             </div>
             <div className="card-row">
                 <div className="card-wrapper villages single">
-                    <h3>Chiefdoms/Villages</h3>
+                    <h3><Link to = '/donations/chiefdoms-villages'>Chiefdoms/Villages</Link></h3>
                 </div>
             </div>
         </div>

@@ -1,15 +1,15 @@
 @import '../../constants.css';
 
-.education-wrapper{
+.medical-wrapper{
     margin-top: 10vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
 
     .header {
-        background-image: url("../../images/headers/education.jpg");
+        background-image: url("../../images/headers/medical.jpg");
         background-size: 100%;
-        background-position: center 70%;
+        background-position: center 50%;
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -34,9 +34,10 @@
             bottom: 0px;
             left: 0px;
             background-color: var(--black);
-            opacity: .6;
+            opacity: .4;
         }
     }
+
     .content {
         min-height: 100vh;
         max-height: fit-content;
@@ -45,12 +46,11 @@
         display:flex;
         flex-direction: column;
 
-        #uni {
-            background-color: var(--blue-3);
-            color: white;
+        #patients {
+            color: var(--blue-3);
         }
 
-        #secondary {
+        #hospitals {
             background-color: var(--blue-2);
         }
 
@@ -88,11 +88,11 @@
                     object-fit: contain;
                 }
 
-                #uni1 {
+                #pic1 {
                     margin-right: 2rem;
                 }
 
-                #uni2 {
+                #pic2 {
                     margin:0 0 0 1rem;
                 }
             }

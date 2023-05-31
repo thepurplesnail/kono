@@ -1,6 +1,6 @@
 import React from "react";
-import elementary_1 from '../../styling/images/education/elementary/elementary-1.jpg';
-import elementary_2 from '../../styling/images/education/elementary/elementary-2.jpg';
+import elementary_1 from '../../../styling/images/donations/education/elementary/elementary-1.jpg';
+import elementary_2 from '../../../styling/images/donations/education/elementary/elementary-2.jpg';
 
 export const Primary = () => {
     return(
@@ -10,7 +10,7 @@ export const Primary = () => {
             </div>
 
             <div className="subsection-wrapper">
-                <img src={elementary_1} className="pic" id = 'uni1'/>
+                <img src={elementary_1} className="pic" id = 'pic1'/>
                 <div className="desc">
                     <h2>Lorem ipsum dolor sit amet.</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolorum nobis ducimus aliquam saepe amet!</p>
@@ -22,7 +22,7 @@ export const Primary = () => {
                     <h2>Lorem ipsum dolor sit amet.</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolorum nobis ducimus aliquam saepe amet!</p>
                 </div>
-                <img src={elementary_2} className="pic" id = 'uni2'/>
+                <img src={elementary_2} className="pic" id = 'pic2'/>
             </div>
         </div>
     )
