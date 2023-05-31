@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     color: white;
+    background-color: white;
     
     .header {
         background-image: url("../../images/headers/donations.jpg");
@@ -60,6 +61,8 @@
             width: 350px;
             height: 50vh;
 
+            background-image: url("../../images/donations/donations.jpg");
+
             position: relative;
 
             h2, h3, .sub-categories h3, &.single h3  {
@@ -67,22 +70,6 @@
                     background-color:var(--blue-3);
                     transition-duration: 200ms;
                 }
-            }
-
-            &.education {
-                background-image: url("../../images/donations/education_bkgd.jpg");
-            }
-
-            &.medical{
-                background-image: url("../../images/donations/medical_bkgd.jpg");
-            }
-
-            &.orphanages{
-                background-image: url("../../images/donations/orphanages_bkgd.jpg");
-            }
-
-            &.the-blinds{
-                background-image: url("../../images/donations/blinds_bkgd.jpg");
             }
 
             &.single{
@@ -96,18 +83,6 @@
                 }
             }
 
-            &.entertainment{
-                background-image: url("../../images/donations/entertainment_bkgd.jpg");
-            }
-
-            &.soccer{
-                background-image: url("../../images/donations/soccer_bkgd.jpg");
-            }
-
-            &.villages{
-                background-image: url("../../images/donations/villages_bkgd.jpg");
-            }
-
             background-size: cover;
 
             &::before {
@@ -117,8 +92,8 @@
                 right: 0px;
                 bottom: 0px;
                 left: 0px;
-                background-color: var(--blue-3);
-                opacity: .2;
+                background-color: var(--black);
+                opacity: 0;
             }
 
             h2 {
