@@ -38,8 +38,6 @@ export const Members = () => {
                         name = "Person 3" 
                         bio = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo autem dolore maxime aperiam incidunt sit exercitationem eveniet doloribus, provident quis, odio debitis? Magnam deleniti maiores illum autem laboriosam unde hic!'
                     />
-                </div>
-                <div className="row">
                     <Member 
                         url = {person4} 
                         name = "Person 4"

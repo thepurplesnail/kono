@@ -42,8 +42,7 @@ export const Donations = () => {
                 <div className="card-wrapper orphanages single">
                     <h3><Link to = '/donations/orphanages'>Orphanages</Link></h3>
                 </div>
-            </div>
-            <div className="card-row">
+
                 <div className="card-wrapper the-blinds single">
                     <h3><Link to = '/donations/the-blinds'>The Blinds</Link></h3>
                 </div>
@@ -53,8 +52,7 @@ export const Donations = () => {
                 <div className="card-wrapper soccer single">
                     <h3><Link to = '/donations/soccer'>Soccer: Ibrahim Dainkeh Memorial Gala</Link></h3>
                 </div>
-            </div>
-            <div className="card-row">
+                
                 <div className="card-wrapper villages single">
                     <h3><Link to = '/donations/chiefdoms-villages'>Chiefdoms/Villages</Link></h3>
                 </div>
