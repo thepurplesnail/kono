@@ -1,6 +1,8 @@
 import './styling/App.scss';
 import React from 'react';
+import { useState } from 'react';
 import NavBar from './components/navbar.jsx';
+import { MobileNav }  from './components/mobile-nav';
 import History from './pages/history';
 import Objectives from './pages/objectives';
 
@@ -32,10 +34,12 @@ export const Home = () => {
 }
 
 function App() {
+  const [isActive, setIsActive] = useState('');
   
   return (
     <div className='page'>
-      <NavBar/>
+      <NavBar isActive = {isActive}/>
+      <MobileNav handleClick = {() => setIsActive('is-active')}/>
       <>
         <Routes>
           <Route path = '/' element = {<Home/>}/>

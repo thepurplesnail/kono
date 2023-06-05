@@ -21,6 +21,7 @@ export const Awards = () => {
 
     return(
         <div className="awards-wrapper">
+            <div className="placeholder"/>
             <div className = 'header'>
                 <h1 className="title">Awards Night</h1>
             </div>

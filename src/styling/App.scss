@@ -1,9 +1,14 @@
 @import './constants.css';
 
-.page {
-  display: flex;
-  justify-content: center;
-  min-width: 40vw;
+
+.placeholder {
+  height: 10vh;
+  width: 100%;
+  background-color: red;
+
+  @media screen and (max-width: 900px) {
+    background-color: aqua;
+  }
 }
 
 .App {
@@ -35,27 +40,35 @@
     opacity: .6;
   }
 
-  &:hover {
-    &:before{
-      opacity: .8;
-      transition: 500ms ease-in;
+  @media screen and (max-width: 900px){
+    &:hover {
+      &:before{
+        opacity: .8;
+        transition: 500ms ease-in;
+      }
     }
-  }
-
-  .web-title {
-    font-weight: 500;
   }
 }
 
 .web-title {
   margin-top: 40vh;
-  font-weight: 800;
   font-size: 4em;
   color: white;
   opacity: 1;
   z-index: 40;
+
+  @media screen and (max-width: 900px) {
+    font-size: 3rem;
+  }
+
 }
 
+.page {
+  display: flex;
+  flex-direction: row;
+  min-width: 40vw;
+}
+  
 html {
   scroll-behavior: smooth;
 }

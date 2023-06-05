@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from "react";
-import { Link, useLocation } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
+import { useStickyNav } from "../hooks/useStickyNav";
 import { HashLink } from "react-router-hash-link";
 import '../styling/navbar.scss'
 
@@ -19,40 +20,12 @@ export const PgLink = ({name, linkName}) => {
     )
 }
 
-export default function NavBar(){
-    const [stickyClass, setStickyClass] = useState('');
-    const [onHome, setOnHome] = useState(true);
-
-    const location = useLocation();
-
-    useEffect(() => {
-        if (location.pathname === '/' || location.pathname === '/#home' || location.pathname === '/#objectives' || location.pathname === '/#history'){
-            setOnHome(true);
-            setStickyClass('');
-        } else {
-            setOnHome(false);
-            setStickyClass('sticky-nav');
-        }
-    }, [location, onHome])
-
-    useEffect(() => {
-        if (onHome){
-            window.addEventListener('scroll', stickNavbar);
-            return () => window.removeEventListener('scroll', stickNavbar);
-        } else {
-            setStickyClass('sticky-nav');
-        }
-      }, [onHome]);
+export default function NavBar(props){
     
-    const stickNavbar = () => {
-        if (window !== undefined) {
-            let windowHeight = window.scrollY;
-            windowHeight > 0 ? setStickyClass('sticky-nav') : setStickyClass('');
-        }
-    };
+    const stickyClass = useStickyNav();
 
     return(
-        <div className={`nav-wrapper ${stickyClass}`}>
+        <div className={`nav-wrapper ${stickyClass} ${props.isActive}`}>
             <ul className="menu">
 
                 <SharedPgLink id = "#home" name = "Home"/>
@@ -64,7 +37,7 @@ export default function NavBar(){
                         <SharedPgLink id = "#objectives" name = "Objectives"/>
                     </ul>
                 </li>
-
+                
                 <PgLink name = 'Members' linkName='members'/>
                 <PgLink name = 'Awards Night' linkName = 'awards night'/>
 
@@ -93,6 +66,7 @@ export default function NavBar(){
                         <li className= 'menu-item'><PgLink name = 'Chiefdoms/Villages' linkName = 'donations/chiefdoms-villages'/></li>
                     </ul>
                 </li>
+
             </ul>
         </div>
     )

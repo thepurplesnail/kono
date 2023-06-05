@@ -49,7 +49,7 @@
         flex-direction: row;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        row-gap: 2rem;
+        row-gap: 1rem;
 
         .card-wrapper {
             display:flex;
@@ -58,10 +58,11 @@
 
             text-align: center;
 
-            width: 350px;
-            height: 50vh;
+            width: 20rem;
+            height: 20rem;
 
             background-image: url("../../images/donations/donations.jpg");
+            
 
             position: relative;
 
