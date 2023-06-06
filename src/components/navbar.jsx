@@ -12,7 +12,7 @@ export const SharedPgLink = ({id, name, handleClick}) => {
     )
 }
 
-export const PgLink = ({name, linkName, handleClick}) => {
+export const PgLink = ({name, linkName, handleClick = () => {}}) => {
     return(
         <li className="menu-item" 
             onClick = {
@@ -36,7 +36,7 @@ export default function NavBar(props){
                 <SharedPgLink id = "#home" name = "Home" handleClick={props.handleClose}/>
 
                 <li className="menu-item has-submenu">
-                    <SharedPgLink id = "#home" name = "About" handleClick={props.handleClose}/>
+                    <SharedPgLink id = "#home" name = "About"/>
                     <ul className="sub-menu">
                         <SharedPgLink id = "#history" name = "History" handleClick={props.handleClose}/>
                         <SharedPgLink id = "#objectives" name = "Objectives" handleClick={props.handleClose}/>
@@ -47,18 +47,18 @@ export default function NavBar(props){
                 <PgLink name = 'Awards Night' linkName = 'awards night' handleClick={props.handleClose}/>
 
                 <li className="menu-item has-submenu">
-                    <PgLink name = 'Donations' linkName = "donations" handleClick={props.handleClose}/>
+                    <PgLink name = 'Donations' linkName = "donations"/>
                     <ul className = 'sub-menu'>
                         <li className= 'menu-item has-submenu'>
                             <PgLink name = 'Education' linkName = 'donations/education' handleClick={props.handleClose}/>
                             <ul className= 'sub-menu'>
-                                <SharedPgLink name = 'Universities' id = 'donations/education/#uni' handleClick={props.handleClose}/>
+                                <SharedPgLink name = 'Universities' id = 'donations/education/#uni'/>
                                 <SharedPgLink name = 'Secondary Schools' id = 'donations/education/#secondary' handleClick={props.handleClose}/>
                                 <SharedPgLink name = 'Primary Schools' id = 'donations/education/#primary' handleClick={props.handleClose}/>
                             </ul>
                         </li>
                         <li className= 'menu-item has-submenu'>
-                            <PgLink name = 'Medical' linkName = 'donations/medical' handleClick={props.handleClose}/>
+                            <PgLink name = 'Medical' linkName = 'donations/medical' />
                             <ul className= 'sub-menu'>
                                 <SharedPgLink name = 'Patients' id = 'donations/medical/#patients' handleClick={props.handleClose}/>
                                 <SharedPgLink name = 'Hospitals' id = 'donations/medical/#hospitals' handleClick={props.handleClose}/>
