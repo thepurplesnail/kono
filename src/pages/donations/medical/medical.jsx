@@ -10,7 +10,7 @@ export const Medical = () => {
     }, [])
 
     return(
-        <div className="medical-wrapper">
+        <div className="medical-wrapper page-container">
             <div className = 'header'>
                 <h1 className="title">Medical</h1> 
             </div>

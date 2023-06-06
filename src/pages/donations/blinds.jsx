@@ -8,7 +8,7 @@ export const Blinds = () => {
     }, [])
 
     return(
-        <div className="blinds-wrapper">
+        <div className="blinds-wrapper page-container">
             <div className = 'header'>
                 <h1 className="title">The Blinds</h1> 
             </div>

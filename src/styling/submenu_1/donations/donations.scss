@@ -43,7 +43,7 @@
         @media screen and (max-width: 900px){
             padding: 4rem 0;
         }
-        padding: 4rem 2rem;
+        padding: 4rem 3rem;
         width: 100%;
 
         display: flex;
@@ -51,12 +51,17 @@
         align-items: center;
 
         .card-row {
+            @media screen and (max-width: 900px){
+                margin: 0;
+            }
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             max-width: fit-content;
             justify-content: center;
-            column-gap: 2rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            column-gap: 2.5rem;
             row-gap: 2rem;
 
             .card-wrapper {
@@ -70,9 +75,7 @@
                 height: 20rem;
 
                 background-image: url("../../images/donations/donations.jpg");
-                
-
-                position: relative;
+                background-size: cover;
 
                 h2, h3, .sub-categories h3, &.single h3  {
                     &:hover{
@@ -90,19 +93,6 @@
                         padding: 1rem;
                         max-width: 15vw;
                     }
-                }
-
-                background-size: cover;
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0px;
-                    right: 0px;
-                    bottom: 0px;
-                    left: 0px;
-                    background-color: var(--black);
-                    opacity: 0;
                 }
 
                 h2 {

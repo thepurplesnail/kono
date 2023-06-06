@@ -50,7 +50,7 @@ export default function NavBar(props){
                     <PgLink name = 'Donations' linkName = "donations"/>
                     <ul className = 'sub-menu'>
                         <li className= 'menu-item has-submenu'>
-                            <PgLink name = 'Education' linkName = 'donations/education' handleClick={props.handleClose}/>
+                            <PgLink name = 'Education' linkName = 'donations/education'/>
                             <ul className= 'sub-menu'>
                                 <SharedPgLink name = 'Universities' id = 'donations/education/#uni'/>
                                 <SharedPgLink name = 'Secondary Schools' id = 'donations/education/#secondary' handleClick={props.handleClose}/>

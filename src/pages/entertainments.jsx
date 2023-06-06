@@ -8,7 +8,7 @@ export const Entertainments = () => {
     }, [])
 
     return(
-        <div className="entertainments-wrapper">
+        <div className="entertainments-wrapper page-container">
             <div className = 'header'>
                 <h1 className="title">Entertainments</h1> 
             </div>

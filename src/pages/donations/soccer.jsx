@@ -8,7 +8,7 @@ export const Soccer = () => {
     }, [])
 
     return(
-        <div className="soccer-wrapper">
+        <div className="soccer-wrapper page-container">
             <div className = 'header'>
                 <h1 className="title">Soccer: Ibrahim Dainkeh Memorial Gala</h1> 
             </div>

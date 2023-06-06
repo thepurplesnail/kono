@@ -16,7 +16,7 @@ export const Members = () => {
     }, [])
 
     return(
-        <div className="members-wrapper">
+        <div className="members-wrapper page-container">
             <div className = 'header'>
                 <h1 className="title">Meet Our Members</h1>
             </div>

@@ -1,7 +1,7 @@
 import {React, useEffect} from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import '../../styling/submenu_1/donations/donations.scss'
+import '../../styling/submenu_1/donations/donations.scss';
 
 const SharedPgLink = ({id, name}) => {
     return(
@@ -18,7 +18,7 @@ export const Donations = () => {
     }, [])
 
     return(
-        <div className="donations-wrapper">
+        <div className="donations-wrapper page-container">
             <div className = 'header'>
                 <h1 className="title">Donations</h1>
             </div>

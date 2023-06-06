@@ -8,7 +8,7 @@ export const Chiefdoms = () => {
     }, [])
 
     return(
-        <div className="chiefdoms-wrapper">
+        <div className="chiefdoms-wrapper page-container">
             <div className = 'header'>
                 <h1 className="title">Chiefdoms/Villages</h1> 
             </div>

@@ -12,7 +12,7 @@ export const Education = () => {
     }, [])
 
     return(
-        <div className="education-wrapper">
+        <div className="education-wrapper page-container">
             <div className = 'header'>
                 <h1 className="title">Education</h1> 
             </div>

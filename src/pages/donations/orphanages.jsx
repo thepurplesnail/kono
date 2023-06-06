@@ -8,7 +8,7 @@ export const Orphanages = () => {
     }, [])
 
     return(
-        <div className="orphanages-wrapper">
+        <div className="orphanages-wrapper page-container">
             <div className = 'header'>
                 <h1 className="title">Orphanages</h1> 
             </div>

@@ -20,7 +20,7 @@ export const Awards = () => {
     }, [])
 
     return(
-        <div className="awards-wrapper">
+        <div className="awards-wrapper page-container">
             <div className = 'header'>
                 <h1 className="title">Awards Night</h1>
             </div>
