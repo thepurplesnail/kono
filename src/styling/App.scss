@@ -68,7 +68,9 @@
   flex-direction: row;
   min-width: 40vw;
 }
-  
-html {
-  scroll-behavior: smooth;
+
+@media screen and (min-width: 900px){
+  html {
+    scroll-behavior: smooth;
+  }
 }

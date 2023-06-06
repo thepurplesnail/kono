@@ -113,11 +113,13 @@ li a:hover {
     &.is-active{
       opacity: 1;
       pointer-events: all;
+      position: fixed;
     }
 
     .menu {
       flex-direction: column;
       padding-left: 25%;
+      padding-right: 10%;
 
       .has-submenu {
         .sub-menu {

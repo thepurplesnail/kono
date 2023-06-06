@@ -35,11 +35,37 @@ export const Home = () => {
 
 function App() {
   const [isActive, setIsActive] = useState('');
-  
+  const [isOpened, setIsOpened] = useState(false);
+
+  // when user clicks MENU:
+  // - opens nav by appending 'is-active' class to NavBar div
+  // - gets rid of MENU and renders X instead by switching isOpened to true
+
+  const handleClick = () => {
+    setIsActive('is-active');
+    setIsOpened(true);
+  }
+
+  // when user clicks X:
+  // - closes nav by removing 'is-active' class from NavBar div
+  // - gets rid of X and renders MENU instead by switching isOpened to false
+
+  const handleClose = () => {
+    setIsActive('');
+    setIsOpened(false);
+  }
+
+
   return (
     <div className='page'>
-      <NavBar isActive = {isActive}/>
-      <MobileNav handleClick = {() => setIsActive('is-active')}/>
+      <NavBar 
+        isActive = {isActive}
+        handleClose = {handleClose}/>
+      <MobileNav 
+        isOpened = {isOpened}
+        handleClick = {handleClick}
+        handleClose = {handleClose}
+      />
       <>
         <Routes>
           <Route path = '/' element = {<Home/>}/>
