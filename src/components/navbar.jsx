@@ -64,11 +64,11 @@ export default function NavBar(props){
                                 <SharedPgLink name = 'Hospitals' id = 'donations/medical/#hospitals' handleClick={props.handleClose}/>
                             </ul>
                         </li>
-                        <li className= 'menu-item'><PgLink name = 'Orphanages' linkName = 'donations/orphanages' handleClick={props.handleClose}/></li>
-                        <li className= 'menu-item'><PgLink name = 'The Blinds' linkName = 'donations/the-blinds' handleClick={props.handleClose}/></li>
-                        <li className= 'menu-item'><PgLink name = 'Entertainments' linkName = 'donations/entertainments' handleClick={props.handleClose}/></li>
-                        <li className= 'menu-item'><PgLink name = 'Soccer: Ibrahim Dainkeh Memorial Gala' linkName = 'donations/soccer' handleClick={props.handleClose}/></li>
-                        <li className= 'menu-item'><PgLink name = 'Chiefdoms/Villages' linkName = 'donations/chiefdoms-villages'handleClick={props.handleClose}/></li>
+                        <PgLink name = 'Orphanages' linkName = 'donations/orphanages' handleClick={props.handleClose}/>
+                        <PgLink name = 'The Blinds' linkName = 'donations/the-blinds' handleClick={props.handleClose}/>
+                        <PgLink name = 'Entertainments' linkName = 'donations/entertainments' handleClick={props.handleClose}/>
+                        <PgLink name = 'Soccer: Ibrahim Dainkeh Memorial Gala' linkName = 'donations/soccer' handleClick={props.handleClose}/>
+                        <PgLink name = 'Chiefdoms/Villages' linkName = 'donations/chiefdoms-villages'handleClick={props.handleClose}/>
                     </ul>
                 </li>
 
